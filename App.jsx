@@ -36,7 +36,6 @@ const instructions = Platform.select({
 });
 
 function App() {
-  var test = 'test'
   return (
     <View style={styles.container}>
       <Text style={styles.welcome}>Welcome to react-native-starter-pack</Text>
