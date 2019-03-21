@@ -1,9 +1,10 @@
 module.exports = {
     parser: 'babel-eslint',
-    extends: 'airbnb',
+    extends: ['airbnb', 'plugin:jest/recommended'],
     env: {
         browser: true,
         es6: true,
+        'jest/globals': true
     },
     globals: {
         Atomics: 'readonly',
@@ -16,6 +17,7 @@ module.exports = {
         ecmaVersion: 2018,
         sourceType: 'module',
     },
-    plugins: ['react'],
-    rules: {},
+    plugins: ['react', 'jest'],
+    rules: {
+    },
 }
