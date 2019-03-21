@@ -18,6 +18,11 @@ Super skinny starter pack for react native projects.
 $ git clone --depth=1 git@github.com:subash-poudel/react-native-starter-pack.git <app-name>
 $ cd <app-name>
 $ rm -rf .git
+$ git init // important should be done before installing dependencies
 $ yarn   # or npm install
 ```
+
+## Issues
+
+Husky will not work if dependencies are installed before git init. Follow the installation instructions above. [Related link].(https://github.com/typicode/husky/issues/326#issuecomment-417274221)
 
