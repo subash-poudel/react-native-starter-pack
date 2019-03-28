@@ -1,11 +1,41 @@
 /**
  * @format
  */
+import { Navigation } from 'react-native-navigation';
 
-import { AppRegistry } from 'react-native';
+import { SCREENS, registerScreens } from './src/screens/screens';
 
-import { name as appName } from './app.json';
+registerScreens();
 
-import App from './App';
+// Navigation.events().registerAppLaunchedListener(() => {
+//   Navigation.setRoot({
+//     root: {
+//       component: {
+//         name: 'navigation.playground.WelcomeScreen',
+//       },
+//     },
+//   });
+// });
 
-AppRegistry.registerComponent(appName, () => App);
+Navigation.events().registerAppLaunchedListener(() => {
+  Navigation.setRoot({
+    root: {
+      stack: {
+        children: [
+          {
+            component: {
+              name: SCREENS.postList,
+              options: {
+                topBar: {
+                  title: {
+                    text: 'Blog',
+                  },
+                },
+              },
+            },
+          },
+        ],
+      },
+    },
+  });
+});
