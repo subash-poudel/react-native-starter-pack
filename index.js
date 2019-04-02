@@ -7,16 +7,6 @@ import { SCREENS, registerScreens } from './src/screens/screens';
 
 registerScreens();
 
-// Navigation.events().registerAppLaunchedListener(() => {
-//   Navigation.setRoot({
-//     root: {
-//       component: {
-//         name: 'navigation.playground.WelcomeScreen',
-//       },
-//     },
-//   });
-// });
-
 Navigation.events().registerAppLaunchedListener(() => {
   Navigation.setRoot({
     root: {
@@ -25,13 +15,7 @@ Navigation.events().registerAppLaunchedListener(() => {
           {
             component: {
               name: SCREENS.postList,
-              options: {
-                topBar: {
-                  title: {
-                    text: 'Blog',
-                  },
-                },
-              },
+              options: {},
             },
           },
         ],
